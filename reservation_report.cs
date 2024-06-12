@@ -23,7 +23,7 @@ namespace Prasanna_Bhavan_Residency
             {
                 if (txtbox_room_no.Visible == true)
                 {
-                    if(radioButton_old_record.Checked) 
+                    if (radioButton_old_record.Checked)
                     {
                         SqlConnection connect = new SqlConnection(connectionstring);
                         connect.Open();
@@ -53,7 +53,7 @@ namespace Prasanna_Bhavan_Residency
                         dataGridView1.DataSource = dt;
                         connect.Close();
                     }
-                    
+
 
                 }
                 if (txtbox_date.Visible == true)
@@ -94,7 +94,7 @@ namespace Prasanna_Bhavan_Residency
                         dataGridView1.DataSource = dt;
                         connect.Close();
                     }
-                    
+
                 }
                 if (dateTimePicker_checkOut.Visible == true)
                 {
@@ -134,7 +134,7 @@ namespace Prasanna_Bhavan_Residency
                         dataGridView1.DataSource = dt;
                         connect.Close();
                     }
-                   
+
                 }
                 if (txtbox_customer_name.Visible == true)
                 {
@@ -169,7 +169,7 @@ namespace Prasanna_Bhavan_Residency
                         dataGridView1.DataSource = dt;
                         connect.Close();
                     }
-                    
+
                 }
                 if (txtbox_mobile_no.Visible == true)
                 {
@@ -203,7 +203,7 @@ namespace Prasanna_Bhavan_Residency
                         dataGridView1.DataSource = dt;
                         connect.Close();
                     }
-                    
+
                 }
                 if (dateTimePicker_to.Visible == true)
                 {
@@ -470,7 +470,7 @@ namespace Prasanna_Bhavan_Residency
 
         private void btn_save_pdf_Click(object sender, EventArgs e)
         {
-            if(lbl_total_sales.Text != "0")
+            if (lbl_total_sales.Text != "0")
             {
                 if (dataGridView1.Rows.Count > 0)
                 {
@@ -558,7 +558,7 @@ namespace Prasanna_Bhavan_Residency
             {
                 MessageBox.Show("Please Click Calculate Total Button");
             }
-           
+
 
 
 
@@ -585,7 +585,7 @@ namespace Prasanna_Bhavan_Residency
         {
             try
             {
-                if(dataGridView1.Rows.Count > 0)
+                if (dataGridView1.Rows.Count > 0)
                 {
                     DataTable dataTable = (DataTable)dataGridView1.DataSource;
 
@@ -604,7 +604,7 @@ namespace Prasanna_Bhavan_Residency
                         lbl_total_sales.Text = totalAmount.ToString();
                     }
                 }
-                
+
             }
             catch (Exception ex)
             {

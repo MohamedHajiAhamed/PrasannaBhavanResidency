@@ -311,6 +311,7 @@
             // 
             // lbl_loading
             // 
+            this.lbl_loading.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_loading.AutoSize = true;
             this.lbl_loading.BackColor = System.Drawing.Color.Transparent;
             this.lbl_loading.Cursor = System.Windows.Forms.Cursors.WaitCursor;

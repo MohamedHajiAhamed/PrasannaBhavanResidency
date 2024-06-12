@@ -62,10 +62,10 @@
             this.btn_update_check_in = new System.Windows.Forms.Button();
             this.btn_adv_booking = new System.Windows.Forms.Button();
             this.panel_remainder_main = new System.Windows.Forms.Panel();
+            this.dataGridView_remainder = new System.Windows.Forms.DataGridView();
             this.panel_remainder = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.dataGridView_remainder = new System.Windows.Forms.DataGridView();
             this.lbl_mail = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lbl_remainder = new System.Windows.Forms.Label();
@@ -81,8 +81,8 @@
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel_remainder_main.SuspendLayout();
-            this.panel_remainder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_remainder)).BeginInit();
+            this.panel_remainder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,11 +93,11 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Yu Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.label3.Location = new System.Drawing.Point(410, 679);
+            this.label3.Location = new System.Drawing.Point(446, 679);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(380, 27);
+            this.label3.Size = new System.Drawing.Size(301, 27);
             this.label3.TabIndex = 121;
-            this.label3.Text = "©️ 2024 Prasanna Residency Bhavan";
+            this.label3.Text = "Prasanna Residency Bhavan";
             // 
             // lbl_user_id
             // 
@@ -295,6 +295,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.lbl_active_room);
             this.groupBox1.Controls.Add(this.label2);
@@ -339,6 +340,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.lbl_reserved_room);
             this.groupBox2.Controls.Add(this.label4);
@@ -383,6 +385,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
             this.groupBox3.Controls.Add(this.lbl_available_room);
             this.groupBox3.Controls.Add(this.label5);
@@ -459,55 +462,15 @@
             // 
             // panel_remainder_main
             // 
+            this.panel_remainder_main.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel_remainder_main.BackColor = System.Drawing.Color.Transparent;
-            this.panel_remainder_main.Controls.Add(this.panel_remainder);
             this.panel_remainder_main.Controls.Add(this.dataGridView_remainder);
+            this.panel_remainder_main.Controls.Add(this.panel_remainder);
             this.panel_remainder_main.Location = new System.Drawing.Point(137, 126);
             this.panel_remainder_main.Name = "panel_remainder_main";
             this.panel_remainder_main.Size = new System.Drawing.Size(929, 423);
             this.panel_remainder_main.TabIndex = 205;
             this.panel_remainder_main.Visible = false;
-            // 
-            // panel_remainder
-            // 
-            this.panel_remainder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(58)))), ((int)(((byte)(98)))));
-            this.panel_remainder.Controls.Add(this.button1);
-            this.panel_remainder.Controls.Add(this.label7);
-            this.panel_remainder.Location = new System.Drawing.Point(15, 9);
-            this.panel_remainder.Name = "panel_remainder";
-            this.panel_remainder.Size = new System.Drawing.Size(902, 41);
-            this.panel_remainder.TabIndex = 210;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(58)))), ((int)(((byte)(98)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(849, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(33, 34);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "X";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label7.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Bisque;
-            this.label7.Location = new System.Drawing.Point(359, 6);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(210, 29);
-            this.label7.TabIndex = 69;
-            this.label7.Text = "Booking Remainder";
             // 
             // dataGridView_remainder
             // 
@@ -554,6 +517,47 @@
             this.dataGridView_remainder.Size = new System.Drawing.Size(902, 370);
             this.dataGridView_remainder.TabIndex = 209;
             // 
+            // panel_remainder
+            // 
+            this.panel_remainder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(58)))), ((int)(((byte)(98)))));
+            this.panel_remainder.Controls.Add(this.button1);
+            this.panel_remainder.Controls.Add(this.label7);
+            this.panel_remainder.Location = new System.Drawing.Point(15, 9);
+            this.panel_remainder.Name = "panel_remainder";
+            this.panel_remainder.Size = new System.Drawing.Size(902, 41);
+            this.panel_remainder.TabIndex = 210;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(58)))), ((int)(((byte)(98)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Red;
+            this.button1.Location = new System.Drawing.Point(849, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(33, 34);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label7.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Bisque;
+            this.label7.Location = new System.Drawing.Point(359, 6);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(210, 29);
+            this.label7.TabIndex = 69;
+            this.label7.Text = "Booking Remainder";
+            // 
             // lbl_mail
             // 
             this.lbl_mail.AutoSize = true;
@@ -566,7 +570,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Image = global::Prasanna_Bhavan_Residency.Properties.Resources.icons8_bell_128;
@@ -580,6 +584,7 @@
             // 
             // lbl_remainder
             // 
+            this.lbl_remainder.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_remainder.AutoSize = true;
             this.lbl_remainder.BackColor = System.Drawing.Color.Transparent;
             this.lbl_remainder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -592,6 +597,7 @@
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -612,8 +618,8 @@
             this.BackgroundImage = global::Prasanna_Bhavan_Residency.Properties.Resources.blue_smooth_wall_textured_background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1192, 715);
-            this.Controls.Add(this.lbl_remainder);
             this.Controls.Add(this.panel_remainder_main);
+            this.Controls.Add(this.lbl_remainder);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.btn_adv_booking);
             this.Controls.Add(this.btn_update_check_in);
@@ -653,9 +659,9 @@
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel_remainder_main.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_remainder)).EndInit();
             this.panel_remainder.ResumeLayout(false);
             this.panel_remainder.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_remainder)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

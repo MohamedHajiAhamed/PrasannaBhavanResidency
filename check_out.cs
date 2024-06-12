@@ -124,15 +124,15 @@ namespace Prasanna_Bhavan_Residency
                     sp_insert_reservation.Parameters.Add(time_out).Value = dateTimePicker_time_out.Text;
                     SqlParameter payment_method_checkout = new SqlParameter("@payment_method_checkout", SqlDbType.VarChar);
                     sp_insert_reservation.Parameters.Add(payment_method_checkout).Value = comboBox_payment_method.Text;
-                    if(txtbox_check_out_date.Visible == true)
+                    if (txtbox_check_out_date.Visible == true)
                     {
-                        string check_out_date_custom = txtbox_check_out_date.Value.Day.ToString() + "-" + txtbox_check_out_date.Value.Month.ToString() + "-" + txtbox_check_out_date.Value.Year.ToString(); 
+                        string check_out_date_custom = txtbox_check_out_date.Value.Day.ToString() + "-" + txtbox_check_out_date.Value.Month.ToString() + "-" + txtbox_check_out_date.Value.Year.ToString();
                         SqlParameter check_out_date = new SqlParameter("@check_out_date", SqlDbType.Date);
                         sp_insert_reservation.Parameters.Add(check_out_date).Value = check_out_date_custom;
                     }
                     else
                     {
-                        string check_out_date_custom = dateTimePicker_check_out_date.Value.Day.ToString() + "-" + dateTimePicker_check_out_date.Value.Month.ToString() + "-" + dateTimePicker_check_out_date.Value.Year.ToString(); 
+                        string check_out_date_custom = dateTimePicker_check_out_date.Value.Day.ToString() + "-" + dateTimePicker_check_out_date.Value.Month.ToString() + "-" + dateTimePicker_check_out_date.Value.Year.ToString();
                         SqlParameter check_out_date = new SqlParameter("@check_out_date", SqlDbType.VarChar);
                         sp_insert_reservation.Parameters.Add(check_out_date).Value = check_out_date_custom;
                     }
@@ -166,34 +166,34 @@ namespace Prasanna_Bhavan_Residency
                         DataTable dt1 = new DataTable();
                         sda1.Fill(dt1);
                         DataRow row = dt1.Rows[0];
-                        
+
                         string owner_email = row["owner_email"].ToString();
                         string manager_email = row["manager_email"].ToString();
-                        if (owner_email != "" && manager_email !="")
+                        if (owner_email != "" && manager_email != "")
                         {
                             try
                             {
-                           string check_out_date_custom = dateTimePicker_check_out_date.Value.Day.ToString() + "-" + dateTimePicker_check_out_date.Value.Month.ToString() + "-" + dateTimePicker_check_out_date.Value.Year.ToString();
-                            
-                            SmtpClient client = new SmtpClient("smtp.gmail.com");
-                            client.Port = 587;
-                            client.Credentials = new System.Net.NetworkCredential("pcpoint656@gmail.com", " ");
-                            client.EnableSsl = true;
-                            MailMessage mail = new MailMessage();
-                            mail.From = new MailAddress(row["email"].ToString());
-                            mail.To.Add(owner_email);
-                            mail.To.Add(manager_email);
-                                mail.Subject = "Room Check Out";
-                            mail.Body = $"Room Number: {comboBox_room_no.Text}\n" +
-                            $"Check Out Date: {check_out_date_custom}\n" +
-                            $"Check Out Time: {dateTimePicker_time_out.Text}\n" +
-                            $"Customer Name: {txtbox_name.Text}\n" +
-                            $"Customer Address: {dt.Rows[0][11]}\n"+
-                            $"Total Amount: {total}";
+                                string check_out_date_custom = dateTimePicker_check_out_date.Value.Day.ToString() + "-" + dateTimePicker_check_out_date.Value.Month.ToString() + "-" + dateTimePicker_check_out_date.Value.Year.ToString();
 
-                            client.Send(mail);
-                            lbl_loading.Visible = false;
-                            MessageBox.Show("Mail Sent Successfully");
+                                SmtpClient client = new SmtpClient("smtp.gmail.com");
+                                client.Port = 587;
+                                client.Credentials = new System.Net.NetworkCredential("pcpoint656@gmail.com", " ");
+                                client.EnableSsl = true;
+                                MailMessage mail = new MailMessage();
+                                mail.From = new MailAddress(row["email"].ToString());
+                                mail.To.Add(owner_email);
+                                mail.To.Add(manager_email);
+                                mail.Subject = "Room Check Out";
+                                mail.Body = $"Room Number: {comboBox_room_no.Text}\n" +
+                                $"Check Out Date: {check_out_date_custom}\n" +
+                                $"Check Out Time: {dateTimePicker_time_out.Text}\n" +
+                                $"Customer Name: {txtbox_name.Text}\n" +
+                                $"Customer Address: {dt.Rows[0][11]}\n" +
+                                $"Total Amount: {total}";
+
+                                client.Send(mail);
+                                lbl_loading.Visible = false;
+                                MessageBox.Show("Mail Sent Successfully");
                             }
                             catch (Exception ex)
                             {
@@ -205,7 +205,7 @@ namespace Prasanna_Bhavan_Residency
                         {
                             lbl_loading.Visible = false;
                             MessageBox.Show("Add Owner E-Mail And Manager E-Mail To Send Mail");
-                            
+
                         }
                         if (MessageBox.Show("Do You Want Print Check Out Receipt", "Print Receipt", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
@@ -272,7 +272,7 @@ namespace Prasanna_Bhavan_Residency
                 MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        
+
         private void check_out_Load(object sender, EventArgs e)
         {
 
@@ -295,7 +295,7 @@ namespace Prasanna_Bhavan_Residency
             dateTimePicker_check_out_date.Value = Convert.ToDateTime(date_custom);
             //txtbox_check_out_date.Value = Convert.ToDateTime(date_custom);
         }
-        
+
         private void roomNo()
         {
             try
@@ -331,30 +331,30 @@ namespace Prasanna_Bhavan_Residency
             time();
             try
             {
-                if(comboBox_room_no.Text != "") 
+                if (comboBox_room_no.Text != "")
                 {
                     lbl_days.Text = "1";
                     SqlConnection connect = new SqlConnection(connectionstring);
-            connect.Open();
-            SqlCommand sp_fetch_check_in = new SqlCommand("sp_fetch_check_in", connect);
-            sp_fetch_check_in.CommandType = CommandType.StoredProcedure;
-            SqlParameter room_number1 = new SqlParameter("@room_number", SqlDbType.VarChar);
-            sp_fetch_check_in.Parameters.Add(room_number1).Value = comboBox_room_no.Text;
-            SqlDataAdapter sda = new SqlDataAdapter(sp_fetch_check_in);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            txtbox_name.Text = dt.Rows[0]["name"].ToString();
-            txtbox_mobile_no.Text = dt.Rows[0]["mobile_number"].ToString();
+                    connect.Open();
+                    SqlCommand sp_fetch_check_in = new SqlCommand("sp_fetch_check_in", connect);
+                    sp_fetch_check_in.CommandType = CommandType.StoredProcedure;
+                    SqlParameter room_number1 = new SqlParameter("@room_number", SqlDbType.VarChar);
+                    sp_fetch_check_in.Parameters.Add(room_number1).Value = comboBox_room_no.Text;
+                    SqlDataAdapter sda = new SqlDataAdapter(sp_fetch_check_in);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+                    txtbox_name.Text = dt.Rows[0]["name"].ToString();
+                    txtbox_mobile_no.Text = dt.Rows[0]["mobile_number"].ToString();
                     txtbox_total_rent.Text = dt.Rows[0]["rent_amount"].ToString();
                     lbl_rent.Text = dt.Rows[0]["rent_amount"].ToString();
                     txtbox_balance.Text = dt.Rows[0]["balance_amount"].ToString();
                     lbl_balance.Text = dt.Rows[0]["balance_amount"].ToString();
                     txtbox_check_in_date.Text = dt.Rows[0]["check_in_date"].ToString();
-                //dateTimePicker_check_out_date.Text = dt.Rows[0]["check_out_date"];
-                txtbox_check_out_date.Text = dt.Rows[0]["check_out_date"].ToString();
-                txtbox_proof.Text = dt.Rows[0]["proof"].ToString();
-                txtbox_proof_number.Text = dt.Rows[0]["proof_number"].ToString();
-                txtbox_address.Text = dt.Rows[0]["address"].ToString();
+                    //dateTimePicker_check_out_date.Text = dt.Rows[0]["check_out_date"];
+                    txtbox_check_out_date.Text = dt.Rows[0]["check_out_date"].ToString();
+                    txtbox_proof.Text = dt.Rows[0]["proof"].ToString();
+                    txtbox_proof_number.Text = dt.Rows[0]["proof_number"].ToString();
+                    txtbox_address.Text = dt.Rows[0]["address"].ToString();
 
                 }
             }
@@ -365,10 +365,10 @@ namespace Prasanna_Bhavan_Residency
         }
         private void comboBox_room_no_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
             if (comboBox_room_no.Text != "")
             {
-                    detailsfetch();
+                detailsfetch();
             }
 
         }
@@ -394,76 +394,76 @@ namespace Prasanna_Bhavan_Residency
             }
         }
 
-        
+
 
         private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
         {
             try
             {
-            Bitmap bitmap = Properties.Resources.Logo1;
-            Image image = new Bitmap(bitmap);
+                Bitmap bitmap = Properties.Resources.Logo1;
+                Image image = new Bitmap(bitmap);
 
-            int marginX = 380;
-            int marginY = 10;
-            int newWidth = 60;
-            int newHeight = (int)((double)image.Height / image.Width * newWidth);
+                int marginX = 380;
+                int marginY = 10;
+                int newWidth = 60;
+                int newHeight = (int)((double)image.Height / image.Width * newWidth);
 
-            Rectangle destinationRect = new Rectangle(marginX, marginY, newWidth, newHeight);
-            e.Graphics.DrawImage(image, destinationRect);
+                Rectangle destinationRect = new Rectangle(marginX, marginY, newWidth, newHeight);
+                e.Graphics.DrawImage(image, destinationRect);
 
-            DateTime dateTime = DateTime.Now;
+                DateTime dateTime = DateTime.Now;
 
-            string check_in_date_custom = txtbox_check_in_date.Value.Day.ToString() + "-" + txtbox_check_in_date.Value.Month.ToString() + "-" + txtbox_check_in_date.Value.Year.ToString();
+                string check_in_date_custom = txtbox_check_in_date.Value.Day.ToString() + "-" + txtbox_check_in_date.Value.Month.ToString() + "-" + txtbox_check_in_date.Value.Year.ToString();
 
-            string check_out_date_custom = dateTimePicker_check_out_date.Value.Day.ToString() + "-" + dateTimePicker_check_out_date.Value.Month.ToString() + "-" + dateTimePicker_check_out_date.Value.Year.ToString();
+                string check_out_date_custom = dateTimePicker_check_out_date.Value.Day.ToString() + "-" + dateTimePicker_check_out_date.Value.Month.ToString() + "-" + dateTimePicker_check_out_date.Value.Year.ToString();
 
-            Pen blackPen = new Pen(Color.Black, 3);
+                Pen blackPen = new Pen(Color.Black, 3);
 
-            string textToPrint = "Room Check Out Receipt";
-            string textToPrint1 = "Address:";
-            string textToPrint2 = "Prasanna Bhavan Residency,";
-            string textToPrint3 = "Near Sengurichi Tollgate,";
-            string textToPrint4 = "Ulundurpet, Tamil Nadu 606107";
-            string textToPrint6 = $"Date:{dateTime.Day}/{dateTime.Month}/{dateTime.Year}";
-            Font Font_for_invoice = new Font("Tahoma", 22, FontStyle.Bold);
-            Font Font_for_heading = new Font("Tahoma", 16, FontStyle.Underline);
-            Font Font_for_tblheading = new Font("Tahoma", 15, FontStyle.Bold);
-            Font Font_for_other = new Font("Arial", 15);
-            e.Graphics.DrawString(textToPrint, Font_for_invoice, Brushes.Black, 230, 80);
-            e.Graphics.DrawString(textToPrint1, Font_for_other, Brushes.Black, 15, 200);
-            e.Graphics.DrawString(textToPrint2, Font_for_other, Brushes.Black, 15, 230);
-            e.Graphics.DrawString(textToPrint3, Font_for_other, Brushes.Black, 15, 258);
-            e.Graphics.DrawString(textToPrint4, Font_for_other, Brushes.Black, 15, 288);
-            e.Graphics.DrawString(textToPrint6, Font_for_other, Brushes.Black, 650, 238);
-            e.Graphics.DrawLine(Pens.Black, 10, 328, 800, 328);
+                string textToPrint = "Room Check Out Receipt";
+                string textToPrint1 = "Address:";
+                string textToPrint2 = "Prasanna Bhavan Residency,";
+                string textToPrint3 = "Near Sengurichi Tollgate,";
+                string textToPrint4 = "Ulundurpet, Tamil Nadu 606107";
+                string textToPrint6 = $"Date:{dateTime.Day}/{dateTime.Month}/{dateTime.Year}";
+                Font Font_for_invoice = new Font("Tahoma", 22, FontStyle.Bold);
+                Font Font_for_heading = new Font("Tahoma", 16, FontStyle.Underline);
+                Font Font_for_tblheading = new Font("Tahoma", 15, FontStyle.Bold);
+                Font Font_for_other = new Font("Arial", 15);
+                e.Graphics.DrawString(textToPrint, Font_for_invoice, Brushes.Black, 230, 80);
+                e.Graphics.DrawString(textToPrint1, Font_for_other, Brushes.Black, 15, 200);
+                e.Graphics.DrawString(textToPrint2, Font_for_other, Brushes.Black, 15, 230);
+                e.Graphics.DrawString(textToPrint3, Font_for_other, Brushes.Black, 15, 258);
+                e.Graphics.DrawString(textToPrint4, Font_for_other, Brushes.Black, 15, 288);
+                e.Graphics.DrawString(textToPrint6, Font_for_other, Brushes.Black, 650, 238);
+                e.Graphics.DrawLine(Pens.Black, 10, 328, 800, 328);
 
-            e.Graphics.DrawString("Customer Details", Font_for_heading, Brushes.Black, 320, 350);
-            e.Graphics.DrawString("Name :" + txtbox_name.Text.Trim(), Font_for_other, Brushes.Black, 20, 388);
-            e.Graphics.DrawString("Mobile Number :" + txtbox_mobile_no.Text.Trim(), Font_for_other, Brushes.Black, 20, 428);
-            e.Graphics.DrawString("Proof :" + txtbox_proof.Text, Font_for_other, Brushes.Black, 520, 388);
-            e.Graphics.DrawString("Proof Number :" + txtbox_proof_number.Text, Font_for_other, Brushes.Black, 520, 428);
-            e.Graphics.DrawString("Address :" + txtbox_address.Text, Font_for_other, Brushes.Black, 20, 468);
+                e.Graphics.DrawString("Customer Details", Font_for_heading, Brushes.Black, 320, 350);
+                e.Graphics.DrawString("Name :" + txtbox_name.Text.Trim(), Font_for_other, Brushes.Black, 20, 388);
+                e.Graphics.DrawString("Mobile Number :" + txtbox_mobile_no.Text.Trim(), Font_for_other, Brushes.Black, 20, 428);
+                e.Graphics.DrawString("Proof :" + txtbox_proof.Text, Font_for_other, Brushes.Black, 520, 388);
+                e.Graphics.DrawString("Proof Number :" + txtbox_proof_number.Text, Font_for_other, Brushes.Black, 520, 428);
+                e.Graphics.DrawString("Address :" + txtbox_address.Text, Font_for_other, Brushes.Black, 20, 468);
 
-            e.Graphics.DrawRectangle(blackPen, 10, 538, 800, 220);
+                e.Graphics.DrawRectangle(blackPen, 10, 538, 800, 220);
 
-            e.Graphics.DrawString("Room Number", Font_for_tblheading, Brushes.Black, 20, 553);
-            e.Graphics.DrawString("Check In Date", Font_for_tblheading, Brushes.Black, 220, 553);
-            e.Graphics.DrawString("Check Out Time", Font_for_tblheading, Brushes.Black, 440, 553);
-            e.Graphics.DrawString("Check Out Date", Font_for_tblheading, Brushes.Black, 640, 553);
+                e.Graphics.DrawString("Room Number", Font_for_tblheading, Brushes.Black, 20, 553);
+                e.Graphics.DrawString("Check In Date", Font_for_tblheading, Brushes.Black, 220, 553);
+                e.Graphics.DrawString("Check Out Time", Font_for_tblheading, Brushes.Black, 440, 553);
+                e.Graphics.DrawString("Check Out Date", Font_for_tblheading, Brushes.Black, 640, 553);
 
-            e.Graphics.DrawString(comboBox_room_no.Text, Font_for_other, Brushes.Black, 30, 583);
-            e.Graphics.DrawString(check_in_date_custom, Font_for_other, Brushes.Black, 230, 583);
-            e.Graphics.DrawString(dateTimePicker_time_out.Text, Font_for_other, Brushes.Black, 450, 583);
-            e.Graphics.DrawString(check_out_date_custom, Font_for_other, Brushes.Black, 650, 583);
+                e.Graphics.DrawString(comboBox_room_no.Text, Font_for_other, Brushes.Black, 30, 583);
+                e.Graphics.DrawString(check_in_date_custom, Font_for_other, Brushes.Black, 230, 583);
+                e.Graphics.DrawString(dateTimePicker_time_out.Text, Font_for_other, Brushes.Black, 450, 583);
+                e.Graphics.DrawString(check_out_date_custom, Font_for_other, Brushes.Black, 650, 583);
 
-            
-            e.Graphics.DrawString("Total Rent Amount", Font_for_tblheading, Brushes.Black, 450, 658);
-            e.Graphics.DrawString("₹" + txtbox_total_rent.Text, Font_for_other, Brushes.Black, 700, 658);
-           
-            e.Graphics.DrawString("Balance Amount", Font_for_tblheading, Brushes.Black, 450, 698);
-            e.Graphics.DrawString("₹" + txtbox_balance.Text, Font_for_other, Brushes.Black, 700, 698);
 
-            e.Graphics.DrawString("Signature", Font_for_other, Brushes.Black, 680, 978);
+                e.Graphics.DrawString("Total Rent Amount", Font_for_tblheading, Brushes.Black, 450, 658);
+                e.Graphics.DrawString("₹" + txtbox_total_rent.Text, Font_for_other, Brushes.Black, 700, 658);
+
+                e.Graphics.DrawString("Balance Amount", Font_for_tblheading, Brushes.Black, 450, 698);
+                e.Graphics.DrawString("₹" + txtbox_balance.Text, Font_for_other, Brushes.Black, 700, 698);
+
+                e.Graphics.DrawString("Signature", Font_for_other, Brushes.Black, 680, 978);
             }
             catch (Exception ex)
             {
@@ -479,13 +479,13 @@ namespace Prasanna_Bhavan_Residency
                 int date = (dateTimePicker_check_out_date.Value.Date - txtbox_check_in_date.Value.Date).Days;
                 if (date >= 1)
                 {
-                    
-                        lbl_days.Text = date.ToString();
-                        txtbox_total_rent.Clear();
-                        txtbox_balance.Clear();
-                        int rent = Convert.ToInt32(lbl_rent.Text);
-                        int total = rent * Convert.ToInt32(lbl_days.Text);
-                        txtbox_total_rent.Text = total.ToString();
+
+                    lbl_days.Text = date.ToString();
+                    txtbox_total_rent.Clear();
+                    txtbox_balance.Clear();
+                    int rent = Convert.ToInt32(lbl_rent.Text);
+                    int total = rent * Convert.ToInt32(lbl_days.Text);
+                    txtbox_total_rent.Text = total.ToString();
                     if (date > 1)
                     {
                         int balance = Convert.ToInt32(txtbox_total_rent.Text) + Convert.ToInt32(lbl_balance.Text);
@@ -506,7 +506,7 @@ namespace Prasanna_Bhavan_Residency
                     int rent = Convert.ToInt32(lbl_rent.Text);
                     int total = rent * Convert.ToInt32(lbl_days.Text);
                     txtbox_total_rent.Text = total.ToString();
-                    if (date > 1) 
+                    if (date > 1)
                     {
                         int balance = Convert.ToInt32(txtbox_total_rent.Text) + Convert.ToInt32(lbl_balance.Text);
                         txtbox_balance.Text = balance.ToString();
@@ -528,4 +528,3 @@ namespace Prasanna_Bhavan_Residency
         }
     }
 }
- 

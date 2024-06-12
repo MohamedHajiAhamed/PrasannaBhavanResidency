@@ -242,6 +242,7 @@
             // 
             // radioButton_add
             // 
+            this.radioButton_add.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radioButton_add.AutoSize = true;
             this.radioButton_add.BackColor = System.Drawing.Color.Transparent;
             this.radioButton_add.Checked = true;
@@ -272,6 +273,7 @@
             // 
             // radioButton_edit
             // 
+            this.radioButton_edit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radioButton_edit.AutoSize = true;
             this.radioButton_edit.BackColor = System.Drawing.Color.Transparent;
             this.radioButton_edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -358,6 +360,7 @@
             // 
             // groupBox_add
             // 
+            this.groupBox_add.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox_add.BackColor = System.Drawing.Color.Transparent;
             this.groupBox_add.Controls.Add(this.comboBox_room_type_add);
             this.groupBox_add.Controls.Add(this.btn_clear);
@@ -393,6 +396,7 @@
             // 
             // groupBox_edit
             // 
+            this.groupBox_edit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox_edit.BackColor = System.Drawing.Color.Transparent;
             this.groupBox_edit.Controls.Add(this.dataGridView1);
             this.groupBox_edit.Controls.Add(this.btn_edit);

@@ -211,6 +211,7 @@
             // 
             // panel_view
             // 
+            this.panel_view.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel_view.BackColor = System.Drawing.Color.Transparent;
             this.panel_view.Controls.Add(this.lbl_balance);
             this.panel_view.Controls.Add(this.lbl_advance);
@@ -527,6 +528,7 @@
             // 
             // radioButton_view
             // 
+            this.radioButton_view.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radioButton_view.AutoSize = true;
             this.radioButton_view.BackColor = System.Drawing.Color.Transparent;
             this.radioButton_view.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -541,6 +543,7 @@
             // 
             // radioButton_book
             // 
+            this.radioButton_book.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radioButton_book.AutoSize = true;
             this.radioButton_book.BackColor = System.Drawing.Color.Transparent;
             this.radioButton_book.Checked = true;
@@ -557,6 +560,7 @@
             // 
             // panel_book
             // 
+            this.panel_book.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel_book.BackColor = System.Drawing.Color.Transparent;
             this.panel_book.Controls.Add(this.txtbox_rent);
             this.panel_book.Controls.Add(this.txtbox_balance);
@@ -864,7 +868,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BackgroundImage = global::Prasanna_Bhavan_Residency.Properties.Resources.bg5;
+            this.BackgroundImage = global::Prasanna_Bhavan_Residency.Properties.Resources.bg2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1192, 715);
             this.Controls.Add(this.lbl_mail);

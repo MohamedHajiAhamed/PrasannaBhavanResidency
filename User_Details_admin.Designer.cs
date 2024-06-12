@@ -62,6 +62,7 @@
             // 
             // comboBox_user_type
             // 
+            this.comboBox_user_type.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBox_user_type.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_user_type.FormattingEnabled = true;
             this.comboBox_user_type.Items.AddRange(new object[] {
@@ -75,7 +76,7 @@
             // 
             // label6
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -88,7 +89,7 @@
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -111,7 +112,7 @@
             // 
             // btn_update
             // 
-            this.btn_update.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_update.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_update.BackColor = System.Drawing.Color.Yellow;
             this.btn_update.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_update.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -141,7 +142,7 @@
             // 
             // btn_delete
             // 
-            this.btn_delete.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_delete.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_delete.BackColor = System.Drawing.Color.Red;
             this.btn_delete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -231,7 +232,7 @@
             // 
             // txtbox_user_name
             // 
-            this.txtbox_user_name.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtbox_user_name.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtbox_user_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbox_user_name.Location = new System.Drawing.Point(650, 121);
             this.txtbox_user_name.Name = "txtbox_user_name";
@@ -241,7 +242,7 @@
             // 
             // txtbox_firstname
             // 
-            this.txtbox_firstname.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtbox_firstname.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtbox_firstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbox_firstname.Location = new System.Drawing.Point(260, 194);
             this.txtbox_firstname.Name = "txtbox_firstname";
@@ -251,7 +252,7 @@
             // 
             // txtbox_lastname
             // 
-            this.txtbox_lastname.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtbox_lastname.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtbox_lastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbox_lastname.Location = new System.Drawing.Point(650, 194);
             this.txtbox_lastname.Name = "txtbox_lastname";
@@ -261,7 +262,7 @@
             // 
             // label8
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -274,7 +275,7 @@
             // 
             // label7
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -287,7 +288,7 @@
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -300,7 +301,7 @@
             // 
             // txtbox_user_id
             // 
-            this.txtbox_user_id.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtbox_user_id.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtbox_user_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbox_user_id.Location = new System.Drawing.Point(260, 121);
             this.txtbox_user_id.Name = "txtbox_user_id";
@@ -314,9 +315,7 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightSeaGreen;
             this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.DarkSlateGray;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;

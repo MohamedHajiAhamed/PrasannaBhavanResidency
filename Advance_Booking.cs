@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Drawing.Printing;
-using System.IO;
 using System.Net.Mail;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Prasanna_Bhavan_Residency
@@ -23,7 +20,7 @@ namespace Prasanna_Bhavan_Residency
 
             lbl_msg.Visible = true;
             btn_print.Visible = false;
-           
+
         }
         public string connectionstring = Connection.GetConnectionString();
 
@@ -64,7 +61,7 @@ namespace Prasanna_Bhavan_Residency
                     dataGridView1.DataSource = dt;
                     connect.Close();
                 }
-                
+
                 if (txtbox_customer_name.Visible == true)
                 {
                     SqlConnection connect = new SqlConnection(connectionstring);
@@ -95,7 +92,7 @@ namespace Prasanna_Bhavan_Residency
                     dataGridView1.DataSource = dt;
                     connect.Close();
                 }
-                
+
             }
             catch (Exception ex)
             {
@@ -164,7 +161,7 @@ namespace Prasanna_Bhavan_Residency
 
                 SqlCommand sp_auto_deletion_booking = new SqlCommand("sp_auto_deletion_booking", connect);
                 int s = sp_auto_deletion_booking.ExecuteNonQuery();
-                
+
                 SqlDataAdapter sd = new SqlDataAdapter(sp_fetch_room);
                 DataTable dt = new DataTable();
                 sd.Fill(dt);
@@ -286,7 +283,7 @@ namespace Prasanna_Bhavan_Residency
 
             try
             {
-                if (comboBox_room_no.Text != "" && txtbox_name.Text.Trim() != "" && txtbox_mob_no_book.Text.Trim() != "" && txtbox_advance.Text.Trim() != "" && comboBox_payment_method.Text != "" )
+                if (comboBox_room_no.Text != "" && txtbox_name.Text.Trim() != "" && txtbox_mob_no_book.Text.Trim() != "" && txtbox_advance.Text.Trim() != "" && comboBox_payment_method.Text != "")
                 {
                     SqlConnection connect = new SqlConnection(connectionstring);
                     connect.Open();
@@ -357,7 +354,7 @@ namespace Prasanna_Bhavan_Residency
                                 client.Send(mail);
                                 lbl_loading.Visible = false;
                                 MessageBox.Show("Mail Sent Successfully");
-                                
+
 
                             }
                             catch (Exception ex)
@@ -371,7 +368,7 @@ namespace Prasanna_Bhavan_Residency
                         {
                             lbl_loading.Visible = false;
                             MessageBox.Show("Add Owner E-Mail And Manager E-Mail To Send Mail");
-                            
+
                         }
                         if (MessageBox.Show("Do You Want Print Check In Receipt", "Print Receipt", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
@@ -401,7 +398,7 @@ namespace Prasanna_Bhavan_Residency
             txtbox_mob_no_book.Clear();
             txtbox_name.Clear();
             txtbox_advance.Clear();
-            
+
         }
         public int Fetchrent()
         {
@@ -461,7 +458,7 @@ namespace Prasanna_Bhavan_Residency
         }
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            
+
             Bitmap bitmap = Properties.Resources.Logo1;
             Image image = new Bitmap(bitmap);
 
@@ -476,7 +473,7 @@ namespace Prasanna_Bhavan_Residency
             DateTime dateTime = DateTime.Now;
 
             string check_in_date_custom = dateTimePicker_check_in_date.Value.Day.ToString() + "-" + dateTimePicker_check_in_date.Value.Month.ToString() + "-" + dateTimePicker_check_in_date.Value.Year.ToString();
-                  
+
             Pen blackPen = new Pen(Color.Black, 3);
 
             string textToPrint = "Room Advance Booking Receipt";
@@ -521,8 +518,8 @@ namespace Prasanna_Bhavan_Residency
             {
                 try
                 {
-                        int selectedRowIndex = dataGridView1.CurrentCell.RowIndex;
-                        int selectedCellIndex = dataGridView1.CurrentCell.ColumnIndex;
+                    int selectedRowIndex = dataGridView1.CurrentCell.RowIndex;
+                    int selectedCellIndex = dataGridView1.CurrentCell.ColumnIndex;
                     if (selectedRowIndex >= 0 && selectedCellIndex >= 0)
                     {
                         SqlConnection connect = new SqlConnection(connectionstring);
@@ -556,8 +553,8 @@ namespace Prasanna_Bhavan_Residency
                 //e.Graphics.DrawString("₹" + txtbox_balance.Text.Trim(), Font_for_other, Brushes.Black, 710, 708);
             }
 
-            
-            
+
+
         }
 
         private void comboBox_room_no_SelectedIndexChanged(object sender, EventArgs e)
@@ -596,7 +593,6 @@ namespace Prasanna_Bhavan_Residency
         {
             //lbl_msg.Visible = false;
             //btn_print.Visible = true;
-            // Check if the clicked cell is valid
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {
                 btn_print.Visible = true;
@@ -611,7 +607,7 @@ namespace Prasanna_Bhavan_Residency
         }
         private void DataGridView1_SelectionChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void dataGridView1_SelectionChanged_1(object sender, EventArgs e)

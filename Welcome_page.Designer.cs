@@ -47,11 +47,11 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Yu Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.label3.Location = new System.Drawing.Point(440, 679);
+            this.label3.Location = new System.Drawing.Point(444, 679);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(380, 27);
+            this.label3.Size = new System.Drawing.Size(301, 27);
             this.label3.TabIndex = 12;
-            this.label3.Text = "©️ 2024 Prasanna Bhavan Residency";
+            this.label3.Text = "Prasanna Bhavan Residency";
             // 
             // btn_close
             // 

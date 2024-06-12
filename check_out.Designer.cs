@@ -176,6 +176,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::Prasanna_Bhavan_Residency.Properties.Resources.icons8_rupee_64;
             this.pictureBox2.Location = new System.Drawing.Point(810, 470);
@@ -187,6 +188,7 @@
             // 
             // comboBox_room_no
             // 
+            this.comboBox_room_no.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBox_room_no.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_room_no.FormattingEnabled = true;
             this.comboBox_room_no.Location = new System.Drawing.Point(542, 115);
@@ -198,6 +200,7 @@
             // 
             // dateTimePicker_time_out
             // 
+            this.dateTimePicker_time_out.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateTimePicker_time_out.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker_time_out.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dateTimePicker_time_out.CustomFormat = "hh:MM tt";
@@ -212,6 +215,7 @@
             // 
             // btn_check_out
             // 
+            this.btn_check_out.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_check_out.BackColor = System.Drawing.Color.SpringGreen;
             this.btn_check_out.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_check_out.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -227,6 +231,7 @@
             // 
             // txtbox_name
             // 
+            this.txtbox_name.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtbox_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbox_name.Location = new System.Drawing.Point(235, 316);
             this.txtbox_name.Name = "txtbox_name";
@@ -236,6 +241,7 @@
             // 
             // label15
             // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -248,6 +254,7 @@
             // 
             // txtbox_mobile_no
             // 
+            this.txtbox_mobile_no.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtbox_mobile_no.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbox_mobile_no.Location = new System.Drawing.Point(840, 316);
             this.txtbox_mobile_no.Name = "txtbox_mobile_no";
@@ -257,6 +264,7 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -269,6 +277,7 @@
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -281,6 +290,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -293,6 +303,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -305,6 +316,7 @@
             // 
             // comboBox_payment_method
             // 
+            this.comboBox_payment_method.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBox_payment_method.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBox_payment_method.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_payment_method.FormattingEnabled = true;
@@ -320,6 +332,7 @@
             // 
             // label16
             // 
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -332,6 +345,7 @@
             // 
             // lbl_loading
             // 
+            this.lbl_loading.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_loading.AutoSize = true;
             this.lbl_loading.BackColor = System.Drawing.Color.Transparent;
             this.lbl_loading.Cursor = System.Windows.Forms.Cursors.WaitCursor;
@@ -346,6 +360,7 @@
             // 
             // dateTimePicker_check_out_date
             // 
+            this.dateTimePicker_check_out_date.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateTimePicker_check_out_date.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker_check_out_date.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dateTimePicker_check_out_date.CustomFormat = "";
@@ -361,6 +376,7 @@
             // 
             // label18
             // 
+            this.label18.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -373,6 +389,7 @@
             // 
             // label17
             // 
+            this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -385,6 +402,7 @@
             // 
             // checkBox_change_check_out
             // 
+            this.checkBox_change_check_out.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox_change_check_out.AutoSize = true;
             this.checkBox_change_check_out.BackColor = System.Drawing.Color.Transparent;
             this.checkBox_change_check_out.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -399,6 +417,7 @@
             // 
             // txtbox_check_out_date
             // 
+            this.txtbox_check_out_date.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtbox_check_out_date.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbox_check_out_date.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtbox_check_out_date.CustomFormat = "";
@@ -413,6 +432,7 @@
             // 
             // txtbox_check_in_date
             // 
+            this.txtbox_check_in_date.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtbox_check_in_date.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbox_check_in_date.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtbox_check_in_date.CustomFormat = "";
@@ -430,6 +450,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::Prasanna_Bhavan_Residency.Properties.Resources.icons8_rupee_64;
             this.pictureBox3.Location = new System.Drawing.Point(204, 474);
@@ -441,6 +462,7 @@
             // 
             // label19
             // 
+            this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -453,6 +475,7 @@
             // 
             // txtbox_total_rent
             // 
+            this.txtbox_total_rent.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtbox_total_rent.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbox_total_rent.Location = new System.Drawing.Point(235, 477);
             this.txtbox_total_rent.Name = "txtbox_total_rent";
@@ -461,6 +484,7 @@
             // 
             // txtbox_proof
             // 
+            this.txtbox_proof.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtbox_proof.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbox_proof.Location = new System.Drawing.Point(57, 581);
             this.txtbox_proof.Name = "txtbox_proof";
@@ -491,6 +515,7 @@
             // 
             // txtbox_balance
             // 
+            this.txtbox_balance.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtbox_balance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbox_balance.Location = new System.Drawing.Point(840, 474);
             this.txtbox_balance.Name = "txtbox_balance";

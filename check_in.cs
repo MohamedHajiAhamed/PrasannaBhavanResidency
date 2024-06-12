@@ -1,5 +1,4 @@
-﻿using Org.BouncyCastle.Asn1.X509;
-using System;
+﻿using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -84,7 +83,7 @@ namespace Prasanna_Bhavan_Residency
                 {
                     room_number.Add(dr.GetString(0).ToString());
                 }
-                
+
                 comboBox_room_no.DataSource = room_number;
                 connect.Close();
 
@@ -164,11 +163,11 @@ namespace Prasanna_Bhavan_Residency
                     sp_insert_check_in.Parameters.Add(balance_amount).Value = txtbox_balance.Text.Trim();
                     SqlParameter payment_method_checkin = new SqlParameter("@payment_method_checkin", SqlDbType.VarChar);
                     sp_insert_check_in.Parameters.Add(payment_method_checkin).Value = comboBox_payment_method.Text;
-                    string check_out_date_custom = dateTimePicker_check_out_date.Value.Day.ToString() + "-" + dateTimePicker_check_out_date.Value.Month.ToString() + "-" + dateTimePicker_check_out_date.Value.Year.ToString(); 
+                    string check_out_date_custom = dateTimePicker_check_out_date.Value.Day.ToString() + "-" + dateTimePicker_check_out_date.Value.Month.ToString() + "-" + dateTimePicker_check_out_date.Value.Year.ToString();
                     SqlParameter check_out_date = new SqlParameter("@check_out_date", SqlDbType.VarChar);
                     sp_insert_check_in.Parameters.Add(check_out_date).Value = check_out_date_custom;
 
-                    string check_in_date_custom = dateTimePicker_check_in_date.Value.Day.ToString() + "-" + dateTimePicker_check_in_date.Value.Month.ToString() + "-" + dateTimePicker_check_in_date.Value.Year.ToString(); 
+                    string check_in_date_custom = dateTimePicker_check_in_date.Value.Day.ToString() + "-" + dateTimePicker_check_in_date.Value.Month.ToString() + "-" + dateTimePicker_check_in_date.Value.Year.ToString();
 
                     SqlParameter check_in_date = new SqlParameter("@check_in_date", SqlDbType.VarChar);
                     sp_insert_check_in.Parameters.Add(check_in_date).Value = check_in_date_custom;
@@ -230,8 +229,8 @@ namespace Prasanna_Bhavan_Residency
                                 client.Send(mail);
                                 lbl_loading.Visible = false;
                                 MessageBox.Show("Mail Sent Successfully");
-                                
-                                
+
+
                             }
                             catch (Exception ex)
                             {
@@ -254,7 +253,7 @@ namespace Prasanna_Bhavan_Residency
                         }
                         else
                         {
-                           comboBox_room_no.DataSource = null;
+                            comboBox_room_no.DataSource = null;
                             roomNo();
                             clearField();
                         }
@@ -309,22 +308,22 @@ namespace Prasanna_Bhavan_Residency
         {
             try
             {
-                    SqlConnection connect = new SqlConnection(connectionstring);
-                    connect.Open();
+                SqlConnection connect = new SqlConnection(connectionstring);
+                connect.Open();
 
-                    SqlCommand sp_fetch_room_rent = new SqlCommand("sp_fetch_room_rent", connect);
-                    sp_fetch_room_rent.CommandType = CommandType.StoredProcedure;
-                    SqlParameter room_number = new SqlParameter("@room_number", SqlDbType.VarChar);
-                    sp_fetch_room_rent.Parameters.Add(room_number).Value = comboBox_room_no.Text;
+                SqlCommand sp_fetch_room_rent = new SqlCommand("sp_fetch_room_rent", connect);
+                sp_fetch_room_rent.CommandType = CommandType.StoredProcedure;
+                SqlParameter room_number = new SqlParameter("@room_number", SqlDbType.VarChar);
+                sp_fetch_room_rent.Parameters.Add(room_number).Value = comboBox_room_no.Text;
 
-                    SqlDataAdapter sda = new SqlDataAdapter(sp_fetch_room_rent);
-                    DataTable dt = new DataTable();
-                    sda.Fill(dt);
-                    connect.Close();
-                    int room_rent = Convert.ToInt32(dt.Rows[0][0]);
+                SqlDataAdapter sda = new SqlDataAdapter(sp_fetch_room_rent);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                connect.Close();
+                int room_rent = Convert.ToInt32(dt.Rows[0][0]);
 
-                    return room_rent;
-                
+                return room_rent;
+
             }
             catch (Exception ex)
             {
@@ -430,7 +429,7 @@ namespace Prasanna_Bhavan_Residency
                 txtbox_advance.Clear();
                 if (checkBox_gst.Checked)
                 {
-                    
+
                     int date = Convert.ToInt32(lbl_days.Text);
                     double GST_Amount = (room_rent * 12 / 100) * date;
                     lbl_gst.Text = GST_Amount.ToString();
@@ -477,7 +476,7 @@ namespace Prasanna_Bhavan_Residency
                 txtbox_advance.Clear();
                 txtbox_balance.Clear();
             }
-           
+
         }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
@@ -520,11 +519,11 @@ namespace Prasanna_Bhavan_Residency
             e.Graphics.DrawLine(Pens.Black, 10, 328, 800, 328);
 
             e.Graphics.DrawString("Customer Details", Font_for_heading, Brushes.Black, 320, 350);
-            e.Graphics.DrawString("Name :"+txtbox_name.Text.Trim(), Font_for_other, Brushes.Black, 20, 388);
-            e.Graphics.DrawString("Mobile Number :"+txtbox_mobile_no.Text.Trim(), Font_for_other, Brushes.Black, 20, 428);
-            e.Graphics.DrawString("Proof :"+comboBoxproof.Text, Font_for_other, Brushes.Black, 520, 388);
-            e.Graphics.DrawString("Proof Number :"+txtbox_proof_no.Text.Trim(), Font_for_other, Brushes.Black, 520, 428);
-            e.Graphics.DrawString("Address :"+richTextBox_address.Text.Trim(), Font_for_other, Brushes.Black, 20, 468);
+            e.Graphics.DrawString("Name :" + txtbox_name.Text.Trim(), Font_for_other, Brushes.Black, 20, 388);
+            e.Graphics.DrawString("Mobile Number :" + txtbox_mobile_no.Text.Trim(), Font_for_other, Brushes.Black, 20, 428);
+            e.Graphics.DrawString("Proof :" + comboBoxproof.Text, Font_for_other, Brushes.Black, 520, 388);
+            e.Graphics.DrawString("Proof Number :" + txtbox_proof_no.Text.Trim(), Font_for_other, Brushes.Black, 520, 428);
+            e.Graphics.DrawString("Address :" + richTextBox_address.Text.Trim(), Font_for_other, Brushes.Black, 20, 468);
 
             e.Graphics.DrawRectangle(blackPen, 10, 538, 800, 220);
 
@@ -539,7 +538,7 @@ namespace Prasanna_Bhavan_Residency
             e.Graphics.DrawString(check_out_date_custom, Font_for_other, Brushes.Black, 650, 583);
 
             e.Graphics.DrawString("Advance Amount Paid", Font_for_tblheading, Brushes.Black, 450, 633);
-            e.Graphics.DrawString("₹"+txtbox_advance.Text.Trim(), Font_for_other, Brushes.Black, 700, 633);
+            e.Graphics.DrawString("₹" + txtbox_advance.Text.Trim(), Font_for_other, Brushes.Black, 700, 633);
             e.Graphics.DrawString("GST 12%", Font_for_tblheading, Brushes.Black, 450, 668);
             if (checkBox_gst.Checked)
             {
@@ -550,7 +549,7 @@ namespace Prasanna_Bhavan_Residency
                 e.Graphics.DrawString("₹0", Font_for_other, Brushes.Black, 700, 668);
             }
             e.Graphics.DrawString("Balance Amount", Font_for_tblheading, Brushes.Black, 450, 708);
-            e.Graphics.DrawString("₹"+txtbox_balance.Text.Trim(), Font_for_other, Brushes.Black, 700, 708);
+            e.Graphics.DrawString("₹" + txtbox_balance.Text.Trim(), Font_for_other, Brushes.Black, 700, 708);
 
             e.Graphics.DrawString("Signature", Font_for_other, Brushes.Black, 680, 978);
 
@@ -558,7 +557,7 @@ namespace Prasanna_Bhavan_Residency
 
         private void dateTimePicker_check_out_date_ValueChanged(object sender, EventArgs e)
         {
-            if (dateTimePicker_check_in_date.Value != null && dateTimePicker_check_out_date.Value != null )
+            if (dateTimePicker_check_in_date.Value != null && dateTimePicker_check_out_date.Value != null)
             {
                 int date = (dateTimePicker_check_out_date.Value.Date - dateTimePicker_check_in_date.Value.Date).Days;
                 if (date > 0)
@@ -592,10 +591,10 @@ namespace Prasanna_Bhavan_Residency
 
         private void txtbox_balance_TextChanged(object sender, EventArgs e)
         {
-            if(txtbox_balance.Text.Trim() != "")
-            checkBox_extra_bed.Visible = true;
+            if (txtbox_balance.Text.Trim() != "")
+                checkBox_extra_bed.Visible = true;
             else
-            checkBox_extra_bed.Visible = false;
+                checkBox_extra_bed.Visible = false;
         }
 
     }

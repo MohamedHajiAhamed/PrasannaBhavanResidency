@@ -2,7 +2,6 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Net;
 using System.Net.Mail;
 using System.Text;
 using System.Windows.Forms;
@@ -11,7 +10,7 @@ namespace Prasanna_Bhavan_Residency
 {
     public partial class Dashboard_admin : Form
     {
-        public Dashboard_admin(string user_id,string mail)
+        public Dashboard_admin(string user_id, string mail)
         {
             InitializeComponent();
             lbl_user_id.Text = user_id;
@@ -128,14 +127,14 @@ namespace Prasanna_Bhavan_Residency
             data();
             remainder();
             int count = Convert.ToInt32(lbl_remainder.Text);
-            if (lbl_mail.Text == "0" && count > 0 )
+            if (lbl_mail.Text == "0" && count > 0)
             {
                 mail();
                 panel_remainder_main.Visible = true;
             }
-            
+
         }
-      
+
         private DataTable GetDataTableFromDataGridView(DataGridView dgv)
         {
             var dt = new DataTable();
@@ -187,59 +186,59 @@ namespace Prasanna_Bhavan_Residency
             return html.ToString();
         }
 
-        
+
         private void mail()
         {
             try
             {
                 SqlConnection connect = new SqlConnection(connectionstring);
                 connect.Open();
-            int parseduser_id = Convert.ToInt32(lbl_user_id.Text);
-            SqlCommand sp_fetch_user_single = new SqlCommand("sp_fetch_single_user", connect);
-            sp_fetch_user_single.CommandType = CommandType.StoredProcedure;
+                int parseduser_id = Convert.ToInt32(lbl_user_id.Text);
+                SqlCommand sp_fetch_user_single = new SqlCommand("sp_fetch_single_user", connect);
+                sp_fetch_user_single.CommandType = CommandType.StoredProcedure;
 
-            SqlParameter user_id = new SqlParameter("@user_id", SqlDbType.Int);
-            sp_fetch_user_single.Parameters.Add(user_id).Value = parseduser_id;
+                SqlParameter user_id = new SqlParameter("@user_id", SqlDbType.Int);
+                sp_fetch_user_single.Parameters.Add(user_id).Value = parseduser_id;
 
-            SqlDataAdapter sda = new SqlDataAdapter(sp_fetch_user_single);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            DataRow row = dt.Rows[0];
-            string owner_email = row["owner_email"].ToString();
-            string manager_email = row["manager_email"].ToString();
-            if (owner_email != "" && manager_email != "")
-            {
-                try
+                SqlDataAdapter sda = new SqlDataAdapter(sp_fetch_user_single);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                DataRow row = dt.Rows[0];
+                string owner_email = row["owner_email"].ToString();
+                string manager_email = row["manager_email"].ToString();
+                if (owner_email != "" && manager_email != "")
                 {
+                    try
+                    {
                         DataTable dataTable = GetDataTableFromDataGridView(dataGridView_remainder);
                         string htmlTable = ConvertDataTableToHTML(dataTable);
                         SmtpClient client = new SmtpClient("smtp.gmail.com");
-                    client.Port = 587;
-                    client.Credentials = new System.Net.NetworkCredential("pcpoint656@gmail.com", " ");
-                    client.EnableSsl = true;
-                    MailMessage mail = new MailMessage();
-                    mail.From = new MailAddress(row["email"].ToString());
-                    mail.To.Add(owner_email);
-                    mail.To.Add(manager_email);
-                    mail.Subject = "Room Advance Booking";
+                        client.Port = 587;
+                        client.Credentials = new System.Net.NetworkCredential("pcpoint656@gmail.com", " ");
+                        client.EnableSsl = true;
+                        MailMessage mail = new MailMessage();
+                        mail.From = new MailAddress(row["email"].ToString());
+                        mail.To.Add(owner_email);
+                        mail.To.Add(manager_email);
+                        mail.Subject = "Room Advance Booking";
                         mail.IsBodyHtml = true;
                         mail.Body = htmlTable;
                         client.Send(mail);
                         lbl_mail.Text = "1";
 
 
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Add Owner E-Mail And Manager E-Mail To Send Mail");
+
                 }
-
-            }
-            else
-            {
-                MessageBox.Show("Add Owner E-Mail And Manager E-Mail To Send Mail");
-
-            }
             }
             catch (Exception ex)
             {
@@ -278,7 +277,7 @@ namespace Prasanna_Bhavan_Residency
                 lbl_available_room.Text = available_room.Rows[0][0].ToString();
 
 
-               
+
 
             }
             catch (Exception ex)
@@ -291,24 +290,24 @@ namespace Prasanna_Bhavan_Residency
         {
             try
             {
-            SqlConnection connect = new SqlConnection(connectionstring);
-            connect.Open();
+                SqlConnection connect = new SqlConnection(connectionstring);
+                connect.Open();
 
-            SqlCommand sp_search_remainder = new SqlCommand("sp_search_remainder", connect);
-            SqlDataAdapter sd = new SqlDataAdapter(sp_search_remainder);
-            DataTable dt = new DataTable();
-            sd.Fill(dt);
-            dataGridView_remainder.DataSource = dt;
-            if (dt.Rows.Count > 0)
-            {
-                    lbl_remainder.Text = dt.Rows.Count.ToString(); 
-            }
+                SqlCommand sp_search_remainder = new SqlCommand("sp_search_remainder", connect);
+                SqlDataAdapter sd = new SqlDataAdapter(sp_search_remainder);
+                DataTable dt = new DataTable();
+                sd.Fill(dt);
+                dataGridView_remainder.DataSource = dt;
+                if (dt.Rows.Count > 0)
+                {
+                    lbl_remainder.Text = dt.Rows.Count.ToString();
+                }
                 else
                 {
                     lbl_remainder.Text = "0";
                 }
-            connect.Close();
-              }
+                connect.Close();
+            }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

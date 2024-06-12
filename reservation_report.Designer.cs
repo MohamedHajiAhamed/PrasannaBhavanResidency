@@ -170,12 +170,12 @@
             // 
             // label13
             // 
-            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Aquamarine;
-            this.label13.Location = new System.Drawing.Point(437, 278);
+            this.label13.Location = new System.Drawing.Point(476, 278);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(61, 31);
             this.label13.TabIndex = 167;
@@ -183,6 +183,7 @@
             // 
             // lbl_user_id
             // 
+            this.lbl_user_id.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_user_id.AutoSize = true;
             this.lbl_user_id.Location = new System.Drawing.Point(1126, 56);
             this.lbl_user_id.Name = "lbl_user_id";
@@ -193,13 +194,13 @@
             // 
             // btn_search
             // 
-            this.btn_search.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_search.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_search.BackColor = System.Drawing.Color.SteelBlue;
             this.btn_search.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_search.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_search.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_search.ForeColor = System.Drawing.Color.AliceBlue;
-            this.btn_search.Location = new System.Drawing.Point(651, 205);
+            this.btn_search.Location = new System.Drawing.Point(651, 208);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(206, 35);
             this.btn_search.TabIndex = 173;
@@ -209,13 +210,13 @@
             // 
             // btn_CalculateTotalSales
             // 
-            this.btn_CalculateTotalSales.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_CalculateTotalSales.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_CalculateTotalSales.BackColor = System.Drawing.Color.SeaGreen;
             this.btn_CalculateTotalSales.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_CalculateTotalSales.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_CalculateTotalSales.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_CalculateTotalSales.ForeColor = System.Drawing.Color.AliceBlue;
-            this.btn_CalculateTotalSales.Location = new System.Drawing.Point(897, 205);
+            this.btn_CalculateTotalSales.Location = new System.Drawing.Point(897, 208);
             this.btn_CalculateTotalSales.Name = "btn_CalculateTotalSales";
             this.btn_CalculateTotalSales.Size = new System.Drawing.Size(206, 35);
             this.btn_CalculateTotalSales.TabIndex = 172;
@@ -225,7 +226,7 @@
             // 
             // txtbox_date
             // 
-            this.txtbox_date.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtbox_date.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtbox_date.CustomFormat = "dd/MM/yyyy";
             this.txtbox_date.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbox_date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -237,7 +238,7 @@
             // 
             // txtbox_room_no
             // 
-            this.txtbox_room_no.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtbox_room_no.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtbox_room_no.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtbox_room_no.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtbox_room_no.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -249,7 +250,7 @@
             // 
             // txtbox_customer_name
             // 
-            this.txtbox_customer_name.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtbox_customer_name.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtbox_customer_name.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtbox_customer_name.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtbox_customer_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -261,19 +262,19 @@
             // 
             // label8
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label8.Location = new System.Drawing.Point(821, 205);
+            this.label8.Location = new System.Drawing.Point(821, 208);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(0, 18);
             this.label8.TabIndex = 165;
             // 
             // lbl_text
             // 
-            this.lbl_text.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbl_text.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_text.AutoSize = true;
             this.lbl_text.BackColor = System.Drawing.Color.Transparent;
             this.lbl_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -286,7 +287,7 @@
             // 
             // label9
             // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -299,7 +300,7 @@
             // 
             // lbl_total_sales
             // 
-            this.lbl_total_sales.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbl_total_sales.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_total_sales.AutoSize = true;
             this.lbl_total_sales.BackColor = System.Drawing.Color.Transparent;
             this.lbl_total_sales.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -312,7 +313,7 @@
             // 
             // label4
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -329,7 +330,7 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.DarkSlateGray;
@@ -352,7 +353,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dataGridView1.Location = new System.Drawing.Point(49, 312);
+            this.dataGridView1.Location = new System.Drawing.Point(49, 322);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -363,11 +364,12 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridView1.ShowCellToolTips = false;
             this.dataGridView1.ShowEditingIcon = false;
-            this.dataGridView1.Size = new System.Drawing.Size(903, 371);
+            this.dataGridView1.Size = new System.Drawing.Size(936, 371);
             this.dataGridView1.TabIndex = 180;
             // 
             // radioButton_SearchByCustomerName
             // 
+            this.radioButton_SearchByCustomerName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radioButton_SearchByCustomerName.AutoSize = true;
             this.radioButton_SearchByCustomerName.BackColor = System.Drawing.Color.Transparent;
             this.radioButton_SearchByCustomerName.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -382,6 +384,7 @@
             // 
             // radioButton_SearchByRoomNumber
             // 
+            this.radioButton_SearchByRoomNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radioButton_SearchByRoomNumber.AutoSize = true;
             this.radioButton_SearchByRoomNumber.BackColor = System.Drawing.Color.Transparent;
             this.radioButton_SearchByRoomNumber.Checked = true;
@@ -398,6 +401,7 @@
             // 
             // radioButtonSearchByCustomerMobileNo
             // 
+            this.radioButtonSearchByCustomerMobileNo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radioButtonSearchByCustomerMobileNo.AutoSize = true;
             this.radioButtonSearchByCustomerMobileNo.BackColor = System.Drawing.Color.Transparent;
             this.radioButtonSearchByCustomerMobileNo.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -412,7 +416,7 @@
             // 
             // dateTimePicker_checkOut
             // 
-            this.dateTimePicker_checkOut.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dateTimePicker_checkOut.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateTimePicker_checkOut.CustomFormat = "";
             this.dateTimePicker_checkOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker_checkOut.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -425,7 +429,7 @@
             // 
             // txtbox_mobile_no
             // 
-            this.txtbox_mobile_no.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtbox_mobile_no.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtbox_mobile_no.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtbox_mobile_no.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtbox_mobile_no.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -437,6 +441,7 @@
             // 
             // radioButton_date
             // 
+            this.radioButton_date.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radioButton_date.AutoSize = true;
             this.radioButton_date.BackColor = System.Drawing.Color.Transparent;
             this.radioButton_date.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -499,7 +504,7 @@
             // 
             // lbl_to
             // 
-            this.lbl_to.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbl_to.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_to.AutoSize = true;
             this.lbl_to.BackColor = System.Drawing.Color.Transparent;
             this.lbl_to.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -513,7 +518,7 @@
             // 
             // dateTimePicker_to
             // 
-            this.dateTimePicker_to.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dateTimePicker_to.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateTimePicker_to.CustomFormat = "";
             this.dateTimePicker_to.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker_to.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -526,7 +531,7 @@
             // 
             // dateTimePicker_from
             // 
-            this.dateTimePicker_from.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dateTimePicker_from.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateTimePicker_from.CustomFormat = "";
             this.dateTimePicker_from.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker_from.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -539,13 +544,13 @@
             // 
             // btn_save_pdf
             // 
-            this.btn_save_pdf.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_save_pdf.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_save_pdf.BackColor = System.Drawing.Color.MidnightBlue;
             this.btn_save_pdf.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_save_pdf.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_save_pdf.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_save_pdf.ForeColor = System.Drawing.Color.AliceBlue;
-            this.btn_save_pdf.Location = new System.Drawing.Point(779, 259);
+            this.btn_save_pdf.Location = new System.Drawing.Point(779, 262);
             this.btn_save_pdf.Name = "btn_save_pdf";
             this.btn_save_pdf.Size = new System.Drawing.Size(206, 35);
             this.btn_save_pdf.TabIndex = 187;
@@ -555,6 +560,7 @@
             // 
             // lbl_loading
             // 
+            this.lbl_loading.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_loading.AutoSize = true;
             this.lbl_loading.BackColor = System.Drawing.Color.Transparent;
             this.lbl_loading.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -569,6 +575,7 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.radioButton_from_to_date);
             this.panel2.Controls.Add(this.radioButton_check_in);
@@ -609,6 +616,7 @@
             // 
             // panel3
             // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Controls.Add(this.radioButton_old_record);
             this.panel3.Controls.Add(this.radioButton_new_record);

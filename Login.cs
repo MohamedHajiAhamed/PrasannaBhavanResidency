@@ -92,13 +92,13 @@ namespace Prasanna_Bhavan_Residency
                         {
                             lbl_loading.Visible = true;
                             MessageBox.Show("Valid User");
-                            
+
                             string user_id = lbl_user_id.Text;
                             Dashboard_admin dashboard_admin = new Dashboard_admin(user_id, "0");
                             dashboard_admin.Show();
                             this.Hide();
                         }
-                        
+
                     }
                     else
                     {
@@ -168,11 +168,6 @@ namespace Prasanna_Bhavan_Residency
                 btn_hide.BringToFront();
 
             }
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

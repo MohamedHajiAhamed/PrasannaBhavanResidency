@@ -1,10 +1,8 @@
-﻿using Org.BouncyCastle.Asn1.X509;
-using System;
+﻿using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Printing;
-using System.Net.Mail;
 using System.Windows.Forms;
 
 
@@ -151,12 +149,12 @@ namespace Prasanna_Bhavan_Residency
                     {
                         lbl_days.Text = date.ToString();
                     }
-                    
+
                     else
                     {
                         lbl_days.Text = "1";
                     }
-                        
+
 
                     if (lbl_gst.Value > 0)
                     {
@@ -342,13 +340,6 @@ namespace Prasanna_Bhavan_Residency
             }
         }
 
-
-
-        private void btn_clear_Click(object sender, EventArgs e)
-        {
-            clearField();
-
-        }
         public void clearField()
         {
             comboBox_room_no.Text = "";
@@ -368,9 +359,9 @@ namespace Prasanna_Bhavan_Residency
             checkBox_extra_bed_new.Checked = false;
             checkBox_gst_new.Checked = false;
 
-            
+
         }
-        
+
 
         private void checkBox_extra_bed_CheckedChanged(object sender, EventArgs e)
         {
@@ -421,11 +412,11 @@ namespace Prasanna_Bhavan_Residency
 
         private void comboBox_room_no_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(comboBox_room_no.Text != "")
+            if (comboBox_room_no.Text != "")
             {
                 data();
             }
-           
+
         }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
@@ -468,11 +459,11 @@ namespace Prasanna_Bhavan_Residency
             e.Graphics.DrawLine(Pens.Black, 10, 328, 800, 328);
 
             e.Graphics.DrawString("Customer Details", Font_for_heading, Brushes.Black, 320, 350);
-            e.Graphics.DrawString("Name :"+txtbox_name.Text.Trim(), Font_for_other, Brushes.Black, 20, 388);
-            e.Graphics.DrawString("Mobile Number :"+txtbox_mobile_no.Text.Trim(), Font_for_other, Brushes.Black, 20, 428);
-            e.Graphics.DrawString("Proof :"+comboBoxproof.Text, Font_for_other, Brushes.Black, 520, 388);
-            e.Graphics.DrawString("Proof Number :"+txtbox_proof_no.Text.Trim(), Font_for_other, Brushes.Black, 520, 428);
-            e.Graphics.DrawString("Address :"+richTextBox_address.Text.Trim(), Font_for_other, Brushes.Black, 20, 468);
+            e.Graphics.DrawString("Name :" + txtbox_name.Text.Trim(), Font_for_other, Brushes.Black, 20, 388);
+            e.Graphics.DrawString("Mobile Number :" + txtbox_mobile_no.Text.Trim(), Font_for_other, Brushes.Black, 20, 428);
+            e.Graphics.DrawString("Proof :" + comboBoxproof.Text, Font_for_other, Brushes.Black, 520, 388);
+            e.Graphics.DrawString("Proof Number :" + txtbox_proof_no.Text.Trim(), Font_for_other, Brushes.Black, 520, 428);
+            e.Graphics.DrawString("Address :" + richTextBox_address.Text.Trim(), Font_for_other, Brushes.Black, 20, 468);
 
             e.Graphics.DrawRectangle(blackPen, 10, 538, 800, 220);
 
@@ -487,7 +478,7 @@ namespace Prasanna_Bhavan_Residency
             e.Graphics.DrawString(check_out_date_custom, Font_for_other, Brushes.Black, 650, 583);
 
             e.Graphics.DrawString("Advance Amount Paid", Font_for_tblheading, Brushes.Black, 450, 633);
-            e.Graphics.DrawString("₹"+txtbox_advance.Text.Trim(), Font_for_other, Brushes.Black, 700, 633);
+            e.Graphics.DrawString("₹" + txtbox_advance.Text.Trim(), Font_for_other, Brushes.Black, 700, 633);
             e.Graphics.DrawString("GST 12%", Font_for_tblheading, Brushes.Black, 450, 668);
             if (checkBox_gst.Checked)
             {
@@ -502,7 +493,7 @@ namespace Prasanna_Bhavan_Residency
                 e.Graphics.DrawString("₹", Font_for_other, Brushes.Black, 700, 668);
             }
             e.Graphics.DrawString("Balance Amount", Font_for_tblheading, Brushes.Black, 450, 708);
-            e.Graphics.DrawString("₹"+txtbox_balance.Text.Trim(), Font_for_other, Brushes.Black, 700, 708);
+            e.Graphics.DrawString("₹" + txtbox_balance.Text.Trim(), Font_for_other, Brushes.Black, 700, 708);
 
             e.Graphics.DrawString("Signature", Font_for_other, Brushes.Black, 680, 978);
 
@@ -550,7 +541,7 @@ namespace Prasanna_Bhavan_Residency
                     int rent = Convert.ToInt32(lbl_rent.Text);
                     int total = rent * Convert.ToInt32(lbl_days.Text);
                     txtbox_rent.Text = total.ToString();
-                    if(txtbox_rent.Text.Trim() == "0")
+                    if (txtbox_rent.Text.Trim() == "0")
                     {
                         int rent1 = Fetchrent();
                         int total1 = rent1 * Convert.ToInt32(lbl_days.Text);
@@ -651,5 +642,6 @@ namespace Prasanna_Bhavan_Residency
             //txtbox_advance.Clear();
             //txtbox_balance.Clear();
         }
+
     }
 }
